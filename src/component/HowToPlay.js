@@ -14,10 +14,12 @@ const HowToPlay = (props) => {
             <div className="how-to-play-info-wrapper">
                 <h3 className="how-to-play-heading">HOW TO PLAY :</h3>
                 <span className="how-to-play-info">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                    Officiis quam hic minima consequuntur sunt necessitatibus optio 
-                    explicabo! Nesciunt qui debitis deserunt pariatur beatae dolores nobis voluptas. 
-                    Voluptatum vero ipsum ad!
+                    This game puts your memory to test.You have multiple cards on your screen.
+                    Each card has a photo on its back.Clicking the card will flip it and you will be 
+                    able to see the image on the back.After every 2 card flips the flipped cards will 
+                    disappear if they have the same image.If the images are different it will flip and
+                    hide the image.
+                    Your goal is to make all the cards disappear.
                 </span>
             </div>
         </div>

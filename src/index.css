@@ -9,6 +9,7 @@
   --border: #333;
   --cardFrontColor: #8c7851;
   --textColor: #423314;
+  --cardStackPadding: 10%;
 }
 
 body {
@@ -47,10 +48,6 @@ body {
   color: var(--textColor);
 }
 
-.App {
-  width: 100%;
-  height: 100%;
-}
 
 .header {
   width: 100%;
@@ -64,7 +61,6 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  border: 1px solid var(--border);
   padding: 1.5rem;
   margin: 1rem;
   font-family: 'Yeon Sung', cursive;
@@ -113,7 +109,7 @@ body {
 .how-to-play-btn {
   display: none;
   position: relative;
-  padding: 0.5rem 0.5rem;
+  padding: 0.25rem 0.5rem;
   width: 2rem;
 }
 .how-to-play-btn:hover {
@@ -180,7 +176,6 @@ body {
 .card-front {
   background: var(--cardFrontColor);
   border-radius: 15px 225px 15px 255px/255px 15px 225px 15px;
-  /* background: url(https://images.fineartamerica.com/images/artworkimages/mediumlarge/3/11-casino-pattern-gambling-luck-money-poker-cards-mister-tee.jpg) no-repeat center; */
   background-size: cover;
 
 }
@@ -235,13 +230,21 @@ body {
   border:solid 4px #41403E !important;
   border-radius: 255px 15px 225px 15px/15px 225px 15px 255px !important;
 }
+.active-mode {
+  border: solid 4px #41403E !important;
+  border-radius: 1220px 200px 1000px 255px/200px 1202px 225px 15px!important;
+}
 
 /*  Media querries */
 
 @media (max-width: 800px) {
+  .header {
+    font-size: 32px;
+  }
   .how-to-play-btn {
     display: block;
     position: relative;
+    margin: 0.5rem;
   }
   .how-to-play-info-wrapper{
     display: none;
@@ -255,6 +258,10 @@ body {
   }
   .game {
     flex-direction: column;
+    width: 100%;
+    height: 90vh;
+    border: none;
+    margin: 0;
   }
   .option, .modes {
     flex-direction: row;
@@ -264,10 +271,10 @@ body {
     justify-content: flex-start;
   }
   .modes span {
-    width: auto;
+    display: none;
   }
   .modes > * {
-    margin: 1rem;
+    margin: 0;
   }
   .option {
     width: 100%;
@@ -277,9 +284,12 @@ body {
   .modes > button, .option > button {
     width: auto;
     margin: 0.5rem !important;
-    font-size: 14px;
+    font-size: 12px;
   }
   .card-stack {
     width: 100%;
+    height: 100%;
+    margin-top: 1rem;
+    padding: var(--cardStackPadding);
   }
 }
