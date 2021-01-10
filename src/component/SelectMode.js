@@ -11,7 +11,6 @@ const SelectMode = (props) => {
 
     const updateMode = (e) => {
         let value = parseInt(e.target.value);
-        console.log(value);
         setModeValue(value);
         props.changeMode(value);
     }
@@ -56,7 +55,6 @@ const SelectMode = (props) => {
             width = (90/widthDivider);
             height = (90/heightDivider);
         }
-        console.log(width + " " + height);
         r.style.setProperty('--wrapperHeight', `${height}%`);
         r.style.setProperty('--wrapperWidth', `${width}%`);
         r.style.setProperty('--cardStackPadding', `${padY}% ${padX}%`);
@@ -71,7 +69,6 @@ const SelectMode = (props) => {
         buttons.forEach(button => {
             if (parseInt(button.value) === modeValue) {
                 button.classList.add("active-mode");
-                console.log(button);
             } else {
             button.classList.remove("active-mode");
             }

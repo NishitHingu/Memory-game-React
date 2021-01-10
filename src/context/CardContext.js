@@ -15,7 +15,6 @@ const shuffle = (card) => {
     card[randomIndex] = card[len];
     card[len] = temp;
   }
-  console.log("called");
   return card;
 };
 
@@ -28,20 +27,16 @@ const CardContextProvider = (props) => {
       if (i < noOfCards) {
         let newCard = { imgSrc: image.urls.thumb, class: "card", id: i };
         cardData = [...cardData,newCard];
-        console.log(cardData);
       }
     });
-    console.log(cardData);
     let newCardData = [];
     newCardData = cardData.map((card,i) => {
       let newCard = {...card};
       newCard.id = i+noOfCards;
-      console.log(newCard.id + " and " + card.id);
       return newCard;
     });
     cardData = [...cardData, ...newCardData];
     cardData = shuffle(cardData);
-    console.log(cardData);
     setCard(cardData);
   }
 

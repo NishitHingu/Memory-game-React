@@ -31,7 +31,6 @@ const Game = (props) => {
       .catch((error) => {
         console.log(error);
       });
-      console.log(noOfCards);
 
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [noOfCards]);
@@ -57,7 +56,6 @@ const Game = (props) => {
 			setCard(newData);
 			currentCard.push(clickedCard);
 			previousCardId = clickedCard.id;
-			console.log(currentCard);
 		}
   };
 
@@ -87,7 +85,6 @@ const Game = (props) => {
     setGameOver(false);
     setNoOfCards(newNoOfCards);
     SolvedCards = 0;
-    console.log("changeMode");
   }
 
   const restart = () => {
